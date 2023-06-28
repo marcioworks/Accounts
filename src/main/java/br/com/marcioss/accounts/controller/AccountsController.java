@@ -78,10 +78,10 @@ public class AccountsController {
         return customerDetails;
     }
 
-    @GetMapping("/sayHello")
+    @GetMapping("/say-hello")
     @RateLimiter(name = "sayHello", fallbackMethod = "sayHelloFallback")
     public String sayHello() {
-        return "Hello, Welcome to Marcioss Bank";
+        return "Hello, Welcome to MarciossBank Kubernetes cluster";
     }
 
     private String sayHelloFallback(Throwable t) {
